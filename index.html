@@ -2,28 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Photo Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Photo Gallery</title>
     <link rel="stylesheet" href="css/gallery.css">
-    <script src="js/gallery.js"></script>
+    <script src="js/gallery.js" defer></script>
 </head>
-<body onload="initializeGallery()">
+<body>
 
-    <div id="image">
-        Hover over an image below to display here.
-    </div>
+    <header>
+        <h1>Accessible Photo Gallery</h1>
+    </header>
 
-    <!-- Minimum 6 images required -->
-    <img class="preview" alt="Styling with a Bandana" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-    
-    <img class="preview" alt="With My Boy" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-    
-    <img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" alt="Young Puppy" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-    
-    <img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" alt="Puppy in Bandana Again" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-    
-    <img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" alt="Sitting Outside" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
-    
-    <img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" alt="Close-up View" onmouseover="upDate(this)" onmouseout="unDo()" onfocus="upDate(this)" onblur="unDo()">
+    <main>
+        <!-- Large display container -->
+        <div id="image">
+            Hover over or focus on an image below to display here.
+        </div>
+
+        <!-- Gallery of 6+ thumbnail images with unique alt text and mouse/focus event handlers -->
+        <div class="gallery">
+            <img class="preview" 
+                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" 
+                 alt="Puppy wearing a cute bandana" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()" 
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+
+            <img class="preview" 
+                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" 
+                 alt="Puppy sitting comfortably outdoors" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()" 
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+
+            <img class="preview" 
+                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" 
+                 alt="Close-up portrait of young puppy" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()" 
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+
+            <img class="preview" 
+                 src="https://picsum.photos/id/1025/600/400" 
+                 alt="Pug wrapped in a warm blanket" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()" 
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+
+            <img class="preview" 
+                 src="https://picsum.photos/id/237/600/400" 
+                 alt="Black Labrador puppy looking closely at camera" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()" 
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+
+            <img class="preview" 
+                 src="https://picsum.photos/id/1062/600/400" 
+                 alt="Dog sitting peacefully on a grassy lawn" 
+                 onmouseover="upDate(this)" 
+                 onmouseout="unDo()" 
+                 onfocus="upDate(this)" 
+                 onblur="unDo()">
+        </div>
+    </main>
 
 </body>
 </html>
